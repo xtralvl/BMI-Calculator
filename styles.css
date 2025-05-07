@@ -1,0 +1,53 @@
+/* === PHONE SCREEN === */
+@media (max-width: 480px) {
+
+html {
+    text-align: center;
+    background-color: aliceblue;
+}
+
+#subtitle {
+    margin: 1rem;
+}
+
+/* === FORM === */
+
+form label,
+form p {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+form input {
+    border-radius: 3px;
+    border: 1px solid rgb(211, 200, 200);
+}
+
+.gender-select {
+    font-size: 2.5rem;
+}
+
+.gender-select i {
+    margin: 0 0.5rem;
+}
+
+#male {
+    color:rgb(15, 112, 237);
+    padding: 0.3rem;
+    border: 1px solid rgb(211, 200, 200);
+    border-radius: 30%;
+}
+
+#female {
+    color: rgb(244, 143, 160);
+    padding: 0.3rem;
+    border: 1px solid rgb(211, 200, 200);
+    border-radius: 30%;
+
+
+}
+
+footer {
+    border: 2px solid red;
+}
+}
