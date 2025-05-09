@@ -30,7 +30,7 @@
       <!-- Age -->
       <label for="age">Age</label>
       <br>
-      <input type="number" id="age" value="age" placeholder="Type in your age">
+      <input type="number" id="age" value="age" placeholder="Type in your age" min="0" max="150">
 
       <!-- Height -->
       <p>Height</p>
@@ -39,7 +39,7 @@
         <span class="unit-icon-height" data-unit="ft" id="ft">ft</span>
       </div>
       <br>
-      <input type="number" id="height" value="height" disabled>
+      <input type="number" id="height" value="height" disabled min="0">
 
       <!-- Weight -->
       <p>Weight</p>
@@ -49,12 +49,16 @@
       </div>
 
       <br>
-      <input type="number" id="weight" value="weight" disabled>
+      <input type="number" id="weight" value="weight" disabled min="0">
       <br>
       <br>
 
       <button type="submit" id="submit" disabled>Calculate BMI</button>
     </form>
+    <br>
+    <br>
+    <button id="reset">Reset</button>
+    <br>
     <br>
 
     <!-- Result -->
@@ -64,6 +68,8 @@
   </main>
 
   <!-- FOOTER -->
+   <br>
+   <br>
   <footer>
     <p>Made with 🖤 by Roland Szucs</p>
   </footer>
