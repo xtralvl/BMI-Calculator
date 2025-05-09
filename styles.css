@@ -1,9 +1,78 @@
+ /* GENDER BUTTONS */
+
+ .male-mode #female {
+    opacity: 0.5;
+    transform: scale(0.8);
+    transition: 0.3s ease;
+}
+
+.female-mode #male {
+    opacity: 0.5;
+    transform: scale(0.8);
+    transition: 0.3s ease;
+}
+
+#male.active, #female.active {
+    box-shadow: 0 0 5px gray;
+    transform: scale(1.1);
+}
+
+ /* HEIGHT UNIT BUTTONS */
+
+ .cm-mode #ft {
+    opacity: 0.5;
+    transform: scale(0.8);
+    transition: 0.3s ease;
+}
+
+.ft-mode #cm {
+    opacity: 0.5;
+    transform: scale(0.8);
+    transition: 0.3s ease;
+}
+
+#cm.active, #ft.active {
+    box-shadow: 0 0 5px gray;
+    transform: scale(1.1);
+}
+
+ /* WEIGHT UNIT BUTTONS */
+
+ .kg-mode #lbs {
+    opacity: 0.5;
+    transform: scale(0.8);
+    transition: 0.3s ease;
+}
+
+.lbs-mode #kg {
+    opacity: 0.5;
+    transform: scale(0.8);
+    transition: 0.3s ease;
+}
+
+#kg.active, #lbs.active {
+    box-shadow: 0 0 5px gray;
+    transform: scale(1.1);
+}
+
+
 /* === PHONE SCREEN === */
 @media (max-width: 480px) {
 
-html {
+html, body {
     text-align: center;
     background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+main {
+    flex: 1;
+}
+
+hr {
+    width: 70%;
 }
 
 #subtitle {
@@ -18,10 +87,29 @@ form p {
     font-weight: bold;
 }
 
+form select,
 form input {
-    border-radius: 3px;
+    width: 80%;
     border: 1px solid rgb(211, 200, 200);
+    border-radius: 10px;
+    height: 2rem;
+    margin: 1rem; 
+    text-align: center;
 }
+
+form option {
+    text-align: center;
+}
+
+form button {
+    font-size: 1.3rem;
+    border: 1px solid rgb(211, 200, 200);
+    padding: 0.5rem;
+    border-radius: 10px;
+    margin: 0 0.6rem;
+    background-color: rgb(202, 226, 248);
+}
+
 
 .gender-select {
     font-size: 2.5rem;
@@ -29,6 +117,8 @@ form input {
 
 .gender-select i {
     margin: 0 0.5rem;
+    cursor: pointer;     
+    user-select: none;
 }
 
 #male {
@@ -43,11 +133,30 @@ form input {
     padding: 0.3rem;
     border: 1px solid rgb(211, 200, 200);
     border-radius: 30%;
-
-
 }
+
+.unit-select span {
+    display: inline-block;
+    font-size: 1.3rem;
+    border: 1px solid rgb(211, 200, 200);
+    padding: 0.5rem;
+    border-radius: 30%;
+    margin: 0 0.6rem;
+}
+
+
+
 
 footer {
-    border: 2px solid red;
+    margin: 0;
+    padding: 0.5rem 0;
 }
+
+footer p {
+    margin: 0;
+    padding: 0;
+    font-size: 0.8rem;
+}
+
+
 }

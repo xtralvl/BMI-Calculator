@@ -1,76 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BMI Calculator</title>
-    <!-- CSS -->
-    <link rel="stylesheet" href="/styles.css">
-    <!-- ICONS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BMI Calculator</title>
+  <link rel="stylesheet" href="/styles.css" />
+  <!-- ICONS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
-
 <body>
-    <!-- HEADER -->
-    <header>
-        <h1 id="title">BMI CALCULATOR</h1>
-        <hr>
+  <!-- HEADER -->
+  <header>
+    <h1 id="title">BMI CALCULATOR</h1>
+    <hr />
+  </header>
 
-    </header>
-    <!-- MAIN -->
-    <main>
-        <!-- DATA -->
-        <p id="subtitle">Calculate your Body Measure Index, using your sex, age, height and weight.</p>
-        <form>
-            <div class="gender-select">
-                <p>Sex</p>
-                <i class="fa-solid fa-mars" data-gender="male" id="male"></i>
-                <i class="fa-solid fa-venus" data-gender="female" id="female"></i>
-              </div>
-              <br>
+  <!-- MAIN -->
+  <main>
+    <p id="subtitle">Calculate your Body Measure Index using your sex, age, height, and weight.</p>
+    <form>
+      <!-- Gender -->
+      <div class="gender-select">
+        <p>Sex</p>
+        <i class="fa-solid fa-mars" data-gender="male" id="male" value="male"></i>
+        <i class="fa-solid fa-venus" data-gender="female" id="female" value="female"></i>
+      </div>
+      <br>
 
-              <label for="age">Age</label><br>
-              <select id="age" name="age">
-              <option value="">Select age</option>
-              <br>
-              <br>
-  
-            <label for="height">Height</label>
-            <br>
-            <div class="unit-select">
-                <span class="unit-icon" data-unit="cm">centimeters</span>
-                <span class="unit-icon" data-unit="ft">feet</span>
-            </div>
-            <input type="number" id="height" name="height" value="height" required>
-            <br>
-            <br>
+      <!-- Age -->
+      <label for="age">Age</label>
+      <br>
+      <input type="number" id="age" value="age" placeholder="Type in your age">
 
-            <label for="inches">Inches</label><br>
-            <input type="number" id="inches" name="inches" value="inch" required> <!-- inches will be only shown when feet is selected -->
-            <br>
-            <br>
+      <!-- Height -->
+      <p>Height</p>
+      <div class="unit-select">
+        <span class="unit-icon-height" data-unit="cm" id="cm">cm</span>
+        <span class="unit-icon-height" data-unit="ft" id="ft">ft</span>
+      </div>
+      <br>
+      <input type="number" id="height" value="height" disabled>
 
-            <label for="weight">Weight</label><br>
-            <input type="number" id="weight" name="weight" required>
-            <br>
-            <br>
-            <br>
+      <!-- Weight -->
+      <p>Weight</p>
+      <div class="unit-select">
+        <span class="unit-icon-weight" data-unit="kg" id="kg">kg</span>
+        <span class="unit-icon-weight" data-unit="lbs" id="lbs">lbs</span>
+      </div>
 
-            <button type="submit">Calculate BMI</button>
-        </form>
+      <br>
+      <input type="number" id="weight" value="weight" disabled>
+      <br>
+      <br>
 
-        <section id="result"> <!-- js will handle and manipulate this dom section to write in the result -->
-            <p></p>
-        </section>
-    </main>
-    
-    <!-- FOOTER -->
-     <footer>
+      <button type="submit" id="submit" disabled>Calculate BMI</button>
+    </form>
+    <br>
 
-        <p>Made by Roland Szucs</p>
+    <!-- Result -->
+    <section id="result">
+      <p></p>
+    </section>
+  </main>
 
-     </footer>
-     <!-- JAVASCRIPT -->
-     <script src="/script.js"></script>
+  <!-- FOOTER -->
+  <footer>
+    <p>Made with 🖤 by Roland Szucs</p>
+  </footer>
+
+  <!-- JS -->
+  <script src="/script.js"></script>
 </body>
 </html>
