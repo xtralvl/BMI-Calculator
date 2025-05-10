@@ -1,5 +1,7 @@
  /* GENDER BUTTONS */
 
+ @media (max-width: 480px) {
+
  .male-mode #female {
     opacity: 0.5;
     transform: scale(0.8);
@@ -187,19 +189,6 @@ footer p {
     padding: 0;
     font-size: 0.8rem;
 }
-
-@media (min-width: 480px) {
-form select,
-form input {
-    width: 30%;
-}
-
-hr {
-    width: 50%;
-}
-
-
-
 
 
 }
