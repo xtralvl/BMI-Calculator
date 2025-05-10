@@ -205,7 +205,7 @@ const calculateBMI = () => {
             hint.innerHTML = `Set gentle, realistic goals. Reducing stress can also support weight changes.`;
           }          
           }
-          
+
   result.style.fontSize = '1.3rem';
 }
 
@@ -222,10 +222,18 @@ resetButton.addEventListener('click', () => {
   document.getElementById('age').value = '';  
   document.getElementById('weight').value = '';  
   document.getElementById('height').value = '';
+  document.getElementById("height").disabled = true;
+  document.getElementById("weight").disabled = true;
+  document.getElementById("height").placeholder = '';
+  document.getElementById("weight").placeholder = '';
+
+
+
 
   const submitButton = document.getElementById('submit');
   submitButton.disabled = true;
 
   document.body.classList.remove('male-mode', 'female-mode', 'cm-mode', 'ft-mode', 'kg-mode', 'lbs-mode');
   result.innerHTML = '';
+  hint.innerHTML = '';
 })
